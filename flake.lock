@@ -699,17 +699,17 @@
         "rnixLsp": "rnixLsp"
       },
       "locked": {
-        "lastModified": 1656554582,
-        "narHash": "sha256-/CrYszW5z4HFqPQX+XbB8AGprSRMhI0YCe0s1xYIryU=",
+        "lastModified": 1656556471,
+        "narHash": "sha256-oGAQT1rCT2TLhL289cTHpSyEjuIW8OjrCG424Uxm0mg=",
         "owner": "realfolk",
         "repo": "haskell-lib",
-        "rev": "eecfeab6ae55b91480bd74fe831159318bcc9e26",
+        "rev": "cd08238d2dc7739d50c19bbdd72aef956a6fcc05",
         "type": "github"
       },
       "original": {
         "owner": "realfolk",
         "repo": "haskell-lib",
-        "rev": "eecfeab6ae55b91480bd74fe831159318bcc9e26",
+        "rev": "cd08238d2dc7739d50c19bbdd72aef956a6fcc05",
         "type": "github"
       }
     },
