@@ -152,7 +152,7 @@
         , buildArtifactsDir
         , srcPath
         , haskellDependencies ? (availableDependencies: [ ])
-        , localDependencies ? { }
+        , localDependencies ? [ ]
         , languageExtensions ? [ ]
         , ...
         }:
