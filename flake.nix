@@ -121,9 +121,9 @@
       loggerTestsDefinition = {
         groupName = "logger";
         projectName = "tests";
-        localDependencies = [
-          haskellLibLibrary
-          (defineHaskellProject loggerLibDefinition)
+        localDependencies = builtins.concatLists [
+          [ (defineHaskellProject loggerLibDefinition) ]
+          loggerLibDefinition.localDependencies
         ];
         executables = {
           test = "Spec.hs";
