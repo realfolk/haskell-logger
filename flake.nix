@@ -9,6 +9,7 @@
     haskellProject.url = "github:realfolk/nix?dir=lib/projects/haskell";
     commonProject.url = "github:realfolk/nix?dir=lib/projects/common";
     projectLib.url = "github:realfolk/nix?dir=lib/projects/lib";
+    haskellLib.url = "github:realfolk/haskell-lib/eecfeab6ae55b91480bd74fe831159318bcc9e26";
   };
 
   outputs =
@@ -22,6 +23,7 @@
     , haskellProject
     , commonProject
     , projectLib
+    , haskellLib
     , ...
     }:
     flakeUtils.lib.eachDefaultSystem (system:
@@ -88,11 +90,21 @@
 
       ghc = haskellPkgs.ghcWithPackages haskellDependencies;
 
+      # UPSTREAM LIBRARIES
+
+      haskellLibLibrary = haskellLib.lib.${system}.defineLibProject {
+        buildDir = config.buildDir;
+        buildArtifactsDir = config.buildArtifactsDir;
+      };
+
       # PROJECTS
 
       loggerLibDefinition = {
         groupName = "logger";
         projectName = "lib";
+        localDependencies = [
+          haskellLibLibrary
+        ];
       };
 
       loggerLibHaskell = haskellProject.lib.make {
@@ -109,8 +121,9 @@
       loggerTestsDefinition = {
         groupName = "logger";
         projectName = "tests";
-        localDependencies = map defineHaskellProject [
-          loggerLibDefinition
+        localDependencies = [
+          haskellLibLibrary
+          (defineHaskellProject loggerLibDefinition)
         ];
         executables = {
           test = "Spec.hs";
@@ -161,6 +174,7 @@
           {
             inherit groupName projectName buildDir buildArtifactsDir haskellDependencies;
             srcPath = "${self}/src/logger/lib";
+            localDependencies = loggerLibDefinition.localDependencies;
           };
     in
     {
