@@ -9,7 +9,7 @@
     haskellProject.url = "github:realfolk/nix?dir=lib/projects/haskell";
     commonProject.url = "github:realfolk/nix?dir=lib/projects/common";
     projectLib.url = "github:realfolk/nix?dir=lib/projects/lib";
-    haskellLib.url = "github:realfolk/haskell-lib/8db5a0efdc1f0e6ec8db623ecbbcafba8615fea9";
+    haskellLib.url = "github:realfolk/haskell-lib/a281eabe93085dc238109d3f20abe83cb30ca5a0";
   };
 
   outputs =
@@ -175,7 +175,6 @@
           {
             inherit groupName projectName buildDir buildArtifactsDir haskellDependencies;
             srcPath = "${self}/src/logger/lib";
-            localDependencies = loggerLibDefinition.localDependencies;
           };
     in
     {
