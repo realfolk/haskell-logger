@@ -5,7 +5,7 @@ module Logger.Lib.Logger
     ) where
 
 import qualified Data.Text         as T
-import qualified Lib.Time          as Time
+import qualified Pouch.Time          as Time
 import           Logger.Lib.Record
 
 type Logger = Level -> Record -> IO ()

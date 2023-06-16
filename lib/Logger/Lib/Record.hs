@@ -26,12 +26,12 @@ import           Data.List               (intersperse)
 import qualified Data.Map                as M
 import qualified Data.Text               as T
 import qualified Data.Text.Lazy          as LT
-import qualified Lib.Time                as Time
-import qualified Lib.Time.Date           as Date
-import qualified Lib.Time.Date.Formatter as DateFmt
-import qualified Lib.Time.Formatter      as TimeFmt
-import qualified Lib.Time.Month          as Month
-import qualified Lib.Time.Weekday        as Weekday
+import qualified Pouch.Time                as Time
+import qualified Pouch.Time.Date           as Date
+import qualified Pouch.Time.Date.Formatter as DateFmt
+import qualified Pouch.Time.Formatter      as TimeFmt
+import qualified Pouch.Time.Month          as Month
+import qualified Pouch.Time.Weekday        as Weekday
 import           Numeric.Natural         (Natural)
 
 -- TYPES
