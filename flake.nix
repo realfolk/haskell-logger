@@ -8,7 +8,7 @@
     haskellPackages.url = "github:realfolk/nix?dir=lib/projects/haskell/packages/ghc-9.2";
     haskellProject.url = "github:realfolk/nix?dir=lib/projects/haskell";
     # Haskell Dependencies
-    pouch.url = "github:realfolk/haskell-pouch/140e293497e75dae68e311dcebd785edc00af182";
+    pouch.url = "github:realfolk/haskell-pouch";
   };
 
   outputs =

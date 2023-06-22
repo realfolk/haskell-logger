@@ -1334,17 +1334,16 @@
         "rnixLsp": "rnixLsp"
       },
       "locked": {
-        "lastModified": 1687390778,
-        "narHash": "sha256-6I/3b/64Z7Mbbr+npRw5D9DIJEueZ/nPNYS3J/r/1uU=",
+        "lastModified": 1687391853,
+        "narHash": "sha256-3/EsJ/uBeoujF7i2pR1mH8pmrcWxLoLLs7PPy0te9QA=",
         "owner": "realfolk",
         "repo": "haskell-pouch",
-        "rev": "140e293497e75dae68e311dcebd785edc00af182",
+        "rev": "1e92c934a98a236f40634d35407e1816d1a98d00",
         "type": "github"
       },
       "original": {
         "owner": "realfolk",
         "repo": "haskell-pouch",
-        "rev": "140e293497e75dae68e311dcebd785edc00af182",
         "type": "github"
       }
     },
