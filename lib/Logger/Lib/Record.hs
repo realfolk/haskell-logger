@@ -97,7 +97,7 @@ instance ToRecord Bool where
   toRecord = showToRecord
 
 instance (ToRecord a) => ToRecord [a] where
-  toRecord list = surroundBrackets (delimitComma True (map toRecord list))
+  toRecord l = surroundBrackets (delimitComma True (map toRecord l))
 
 instance (Ord k, ToRecord k, ToRecord v) => ToRecord [(k, v)] where
   toRecord = toRecord . M.fromList

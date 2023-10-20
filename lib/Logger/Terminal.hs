@@ -55,8 +55,8 @@ defaultTheme color =
 -- RENDERER
 
 render :: Maybe Theme -> L.Record -> T.Text
-render maybeTheme record =
-  case record of
+render maybeTheme outerRecord =
+  case outerRecord of
     L.Plain text -> text
     L.Formatted color bold record ->
       case maybeTheme of
